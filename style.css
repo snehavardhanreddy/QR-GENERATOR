@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(120deg, #f0f4ff, #e6ecff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Wrapper */
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Main Card */
+.app-card {
+    width: 380px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+/* Header */
+.top {
+    margin-bottom: 25px;
+}
+
+.top h1 {
+    font-size: 24px;
+    color: #111827;
+}
+
+.top p {
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: 5px;
+}
+
+/* Input Area */
+.input-area {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #6366f1;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(99,102,241,0.1);
+}
+
+/* Button */
+button {
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #6366f1;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #4f46e5;
+}
+
+/* Output */
+.output {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.output img {
+    width: 170px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+/* Download */
+.download {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #10b981;
+    color: white;
+    border-radius: 8px;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+/* Mobile */
+@media (max-width: 420px) {
+    .app-card {
+        width: 90%;
+        padding: 20px;
+    }
+}

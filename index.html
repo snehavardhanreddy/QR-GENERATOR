@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Studio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <div class="app-card">
+
+        <!-- Header -->
+        <div class="top">
+            <h1>QR Studio</h1>
+            <p>Create and download QR codes instantly</p>
+        </div>
+
+        <!-- Input -->
+        <form method="POST" action="/generate" class="input-area">
+            <input type="text" name="data" placeholder="Paste link or enter text..." required>
+            <button type="submit">Generate QR</button>
+        </form>
+
+        <!-- Output -->
+        {% if qr_path %}
+        <div class="output">
+            <img src="{{ qr_path }}">
+            <a href="/download" class="download">Download PNG</a>
+        </div>
+        {% endif %}
+
+    </div>
+
+</div>
+
+</body>
+</html>
